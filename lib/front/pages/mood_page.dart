@@ -7,7 +7,7 @@ import 'package:psychodynamics/front/widgets/app_bar.dart';
 import 'package:psychodynamics/front/widgets/mood_widget.dart';
 
 class MoodPage extends StatefulWidget {
-  static const String routeName = '/MoodPage';
+  static const String routeName = '/moods';
 
   _MoodPageState createState() => _MoodPageState();
 }

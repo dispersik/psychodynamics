@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     PersonPage.routeName: (BuildContext context) => PersonPage(),
     IssuePage.routeName: (BuildContext context) => IssuePage(),
     NewMoodPage.routeName: (BuildContext context) => NewMoodPage(),
+
   };
 
   @override

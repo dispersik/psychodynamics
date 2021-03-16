@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:psychodynamics/front/ui_helper.dart';
 
 class NewMoodPage extends StatefulWidget {
-  static const routeName = '/newMoodPage';
+  static const routeName = '/newMood';
 
   @override
   _NewMoodPageState createState() => _NewMoodPageState();
