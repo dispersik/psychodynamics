@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:psychodynamics/front/pages/home_page.dart';
+import 'package:psychodynamics/front/pages/issue_page.dart';
 import 'package:psychodynamics/front/pages/mood_page.dart';
+import 'package:psychodynamics/front/pages/person_page.dart';
+import 'package:psychodynamics/front/pages/task_page.dart';
 
 class CustomAppBar extends StatefulWidget {
   @override
@@ -23,6 +26,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               Icons.person,
               size: 30,
             ),
+            onPressed: ()=>Navigator.pushNamed(context, PersonPage.routeName),
           ),
           Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
@@ -42,6 +46,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
             padding: EdgeInsets.only(left: 20, right: 20),
             child: IconButton(
               icon: Icon(Icons.cloud, size: 30),
+              onPressed: ()=>Navigator.pushNamed(context, IssuePage.routeName),
             ),
           ),
           IconButton(
@@ -49,6 +54,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               Icons.star_border,
               size: 30,
             ),
+            onPressed: ()=>Navigator.pushNamed(context, TaskPage.routeName),
           ),
         ],
       ),

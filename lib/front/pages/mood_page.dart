@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:psychodynamics/front/pages/new_mood_page.dart';
 import 'package:psychodynamics/front/ui_helper.dart';
 import 'package:psychodynamics/front/widgets/app_bar.dart';
 import 'package:psychodynamics/front/widgets/mood_widget.dart';
@@ -27,10 +28,10 @@ class _MoodPageState extends State<MoodPage> {
             ),
           ),
         ),
-        backgroundColor: backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: () => print('mood add'),
+          onPressed: () => Navigator.pushNamed(context, NewMoodPage.routeName),
         ),
         bottomNavigationBar: CustomAppBar());
   }
