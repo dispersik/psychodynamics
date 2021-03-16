@@ -1,42 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:psychodynamics/front/pages/mood_page.dart';
+import 'package:psychodynamics/front/ui_helper.dart';
+import 'front/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
+  var routes = <String, WidgetBuilder> {
+    HomePage.routeName: (BuildContext context) => HomePage(),
+    MoodPage.routeName: (BuildContext context) => MoodPage(),
+  };
+
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle( // navigation bar color
+      statusBarColor: Colors.transparent, // status bar color
+    ));
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Psychodynamics',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        backgroundColor: kBackgroundColor,
+        primarySwatch: kPrimarySwatch,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Pd'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
-      ),
+      home: HomePage(),
+      routes: routes,
     );
   }
 }
