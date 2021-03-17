@@ -29,9 +29,10 @@ class _CustomAppBarState extends State<CustomAppBar> {
               size: 30,
               color: _getColor(PersonPage.routeName),
             ),
-            onPressed: () =>
-                Navigator.push(context, FadeRoute(page: PersonPage())),
-          ),
+            onPressed: () {
+              activePage = PersonPage.routeName;
+              Navigator.push(context, FadeRoute(page: PersonPage()));
+            }),
           Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: IconButton(
