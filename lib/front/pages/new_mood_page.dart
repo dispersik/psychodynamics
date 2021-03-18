@@ -16,13 +16,23 @@ class _NewMoodPageState extends State<NewMoodPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
+        // removes shadow
+        elevation: 0,
         title: Text(
           'New mood record',
           style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w700,
-              color: Colors.black/*Theme.of(context).primaryColor*/),
+              color: Colors.black /*Theme.of(context).primaryColor*/),
         ),
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.save,
+                color: Theme.of(context).backgroundColor,
+              ),
+              onPressed: () => print('Save button'))
+        ],
       ),
       body: SizedBox.expand(
         child: ListView(
@@ -42,7 +52,7 @@ class _NewMoodPageState extends State<NewMoodPage> {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height/4,
+                  height: MediaQuery.of(context).size.height / 4,
                   child: GridView.count(
                     // Create a grid with 2 columns. If you change the scrollDirection to
                     // horizontal, this produces 2 rows.
@@ -72,7 +82,7 @@ class _NewMoodPageState extends State<NewMoodPage> {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height/4,
+                  height: MediaQuery.of(context).size.height / 4,
                   child: GridView.count(
                     // Create a grid with 2 columns. If you change the scrollDirection to
                     // horizontal, this produces 2 rows.
@@ -93,17 +103,18 @@ class _NewMoodPageState extends State<NewMoodPage> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text('Title', style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: Theme.of(context).primaryColor),),
+              child: Text(
+                'Title',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: Theme.of(context).primaryColor),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.cyanAccent
-                ),
+                // decoration: BoxDecoration(color: Colors.cyanAccent),
                 child: TextField(
                   controller: titleController,
                 ),
@@ -111,28 +122,23 @@ class _NewMoodPageState extends State<NewMoodPage> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text('Comment',style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: Theme.of(context).primaryColor),),
+              child: Text(
+                'Comment',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: Theme.of(context).primaryColor),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.cyanAccent
-                ),
+                // decoration: BoxDecoration(color: Colors.cyanAccent),
                 child: TextField(
                   controller: commentController,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                  onPressed: () => print("save button tap"),
-                  child: Text('Save mood record')),
-            )
           ],
         ),
       ),

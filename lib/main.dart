@@ -30,8 +30,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Psychodynamics',
       theme: ThemeData(
-        backgroundColor: kBackgroundColor,
-        primarySwatch: kPrimarySwatch,
+        // backgroundColor: kBackgroundColor,
+        // primarySwatch: kPrimarySwatch,
       ),
       home: HomePage(),
       routes: routes,
