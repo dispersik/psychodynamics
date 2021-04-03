@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:psychodynamics/front/pages/issue_page.dart';
-import 'package:psychodynamics/front/pages/mood_page.dart';
+import 'package:psychodynamics/front/pages/mood/mood_page.dart';
 import 'package:psychodynamics/front/ui_helper.dart';
 import 'front/pages/home_page.dart';
-import 'front/pages/new_mood_page.dart';
+import 'front/pages/mood/new_mood_page.dart';
 import 'front/pages/person_page.dart';
 
 void main() {

@@ -4,7 +4,7 @@ import 'package:flutter/painting.dart';
 import 'package:psychodynamics/back/helper.dart';
 import 'package:psychodynamics/front/pages/home_page.dart';
 import 'package:psychodynamics/front/pages/issue_page.dart';
-import 'package:psychodynamics/front/pages/mood_page.dart';
+import 'package:psychodynamics/front/pages/mood/mood_page.dart';
 import 'package:psychodynamics/front/pages/person_page.dart';
 import 'package:psychodynamics/front/pages/task_page.dart';
 import 'package:psychodynamics/front/widgets/fade_route.dart';
