@@ -36,6 +36,6 @@ Color backgroundColor = Colors.white70;
 
 const kBackgroundColor = Colors.white70;
 
-Color primarySwatch = Colors.grey[700];
+Color? primarySwatch = Colors.grey[700];
 
 const kPrimarySwatch = Colors.grey;

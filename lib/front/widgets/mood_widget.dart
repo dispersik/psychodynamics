@@ -3,7 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:psychodynamics/front/ui_helper.dart';
 
 class MoodListTile extends StatelessWidget {
-  MoodListTile({@required this.title});
+  MoodListTile({required this.title});
 
   final String title;
 
@@ -28,16 +28,16 @@ class MoodListTile extends StatelessWidget {
 }
 
 class AppListTile extends StatelessWidget {
-  AppListTile({@required this.title, this.onTap, this.icon});
+  AppListTile({required this.title, this.onTap, this.icon});
 
   final String title;
-  final Function onTap;
-  final Widget icon;
+  final Function? onTap;
+  final Widget? icon;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: onTap as void Function()?,
       child: Container(
         width: MediaQuery.of(context).size.width * 0.9,
         height: MediaQuery.of(context).size.width * 0.4,

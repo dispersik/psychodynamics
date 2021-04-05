@@ -44,7 +44,7 @@ class _MoodPageState extends State<MoodPage> {
                         onTap: () => Navigator.push(
                           context,
                           CupertinoPageRoute(
-                            builder: (context) => MoodAnalyticsPage(),
+                            builder: (context) => NewMoodPage(),
                           ),
                         ),
                       ),

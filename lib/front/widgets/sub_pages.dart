@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class SubPages extends StatefulWidget {
   SubPages({this.pages});
 
-  List<Widget> pages;
+  List<Widget>? pages;
 
   _SubPagesState createState() => _SubPagesState();
 }
@@ -14,7 +14,7 @@ class _SubPagesState extends State<SubPages> {
     return SizedBox.expand(
       child: Column(
         children: [
-          NavigationUnits(widget.pages),
+          NavigationUnits(widget.pages!),
 
         ],
       ),

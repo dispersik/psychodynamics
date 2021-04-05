@@ -12,14 +12,20 @@ class MoodTestsPage extends StatelessWidget {
           context,
           CupertinoPageRoute(
             builder: (context) => TestWebView(
-              url: 'https://psytests.org/result?v=lus1Q1Fr3eFWmekLlg',
+              url: 'https://experimental-psychic.ru/test-kettella-forma-a/#a4',
             ),
           ),
         ),
-        child: ClipRect(
-          child: Container(
-            color: Colors.blueGrey,
-            child: Text('Тест Люшера'),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              width: MediaQuery.of(context).size.width * .9,
+              height: MediaQuery.of(context).size.height * .2,
+              color: Colors.blueGrey,
+              child: Center(child: Text('Тест Люшера')),
+            ),
           ),
         ),
       )
@@ -31,9 +37,11 @@ class MoodTestsPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Text('Mood Tests'),
       ),
-      body: ListView.builder(itemBuilder: (context, index) {
-        return _children[index];
-      }),
+      body: ListView.builder(
+          itemCount: _children.length,
+          itemBuilder: (context, index) {
+            return _children[index];
+          }),
     );
   }
 }

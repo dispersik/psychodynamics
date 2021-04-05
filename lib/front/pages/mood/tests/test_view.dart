@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:psychodynamics/front/pages/mood/tests/test_tile.dart';
 import 'dart:io';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class TestWebView extends StatefulWidget {
-  TestWebView({@required this.url});
+  TestWebView({required this.url});
 
   final String url;
-  WebViewController _webViewController;
+  late WebViewController _webViewController;
 
   @override
   TestWebViewState createState() => TestWebViewState();
@@ -33,7 +34,12 @@ class TestWebViewState extends State<TestWebView> {
         ],
         title: Text('title'),
       ),
-      body: WebView(
+      body: Center(
+        child: TestTile(
+          title: 'Question',
+          numberOfOptions: 3,
+        ),
+      ), /*WebView(
         onWebViewCreated: (controller) {
           widget._webViewController = controller;
         },
@@ -41,7 +47,7 @@ class TestWebViewState extends State<TestWebView> {
           print("web view state: $str\n\n\n\n\n\n\n\n\n\n\n");
         },
         initialUrl: widget.url,
-      ),
+      ),*/
     );
   }
 }

@@ -275,9 +275,9 @@ LineChartData avgData() {
         isCurved: true,
         colors: [
           ColorTween(begin: gradientColors[0], end: gradientColors[1])
-              .lerp(0.2),
+              .lerp(0.2)!,
           ColorTween(begin: gradientColors[0], end: gradientColors[1])
-              .lerp(0.2),
+              .lerp(0.2)!,
         ],
         barWidth: 5,
         isStrokeCapRound: true,

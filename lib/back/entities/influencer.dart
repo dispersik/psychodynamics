@@ -7,8 +7,8 @@ enum InfluencerTypes {
 }
 
 class Influencer extends Item {
-  Influencer({@required name, @required iconName, this.type, this.features})
+  Influencer({required name, required iconName, this.type, this.features})
       : super(name: name, iconName: iconName);
-  InfluencerTypes type = InfluencerTypes.entity;
-  List<InfluencingFeature> features;
+  InfluencerTypes? type = InfluencerTypes.entity;
+  List<InfluencingFeature>? features;
 }
