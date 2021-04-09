@@ -13,25 +13,27 @@ class _TestScreen extends State<TestScreen> {
   Widget build(BuildContext context) {
     return SizedBox.expand(
       child: Scaffold(
-        backgroundColor: Colors.redAccent[100],
+        // backgroundColor: Colors.redAccent[100],
+        appBar: AppBar(
+          title: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                "Tests",
+                textAlign: TextAlign.end,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
+            ],
+          ),
+        ),
         body: Padding(
           padding: const EdgeInsets.only(top: 25.0, left: 10, right: 10),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Text(
-                      "Test",
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    )
-                  ],
-                ),
-              ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * .05,
               ),

@@ -12,24 +12,19 @@ class _MoodScreenState extends State<MoodScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Mood",
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.only(top: 25.0, left: 10, right: 10),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Text(
-                    "Mood",
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  )
-                ],
-              ),
-            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * .05,
             ),
@@ -50,7 +45,7 @@ class _MoodScreenState extends State<MoodScreen> {
           ],
         ),
       ),
-      backgroundColor: Colors.greenAccent[100],
+      // backgroundColor: Colors.greenAccent[100],
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:psychodynamics/back/data/db/sqlite_provider.dart';
+import 'package:psychodynamics/back/entities/test_info.dart';
 import 'package:psychodynamics/front/screens/tests/test_form/test_form.dart';
 import 'package:psychodynamics/front/screens/tests/test_listing/bloc/test_listing_bloc.dart';
 import 'package:psychodynamics/front/screens/tests/test_listing/bloc/test_listing_event.dart';
@@ -16,7 +18,26 @@ class TestListingScreen extends StatelessWidget {
           builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('All tests'),
+            title: Text(
+              'All tests',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+            actions: [
+              IconButton(
+                icon: Icon(Icons.file_copy_sharp),
+                onPressed: () async {
+                  // print('db stuff');
+                  // final dbProvider = SQLiteProvider();
+                  // print(
+                  //   await (await dbProvider.getDBInstance('test_entries.db'))
+                  //       .query("table"),
+                  // );
+                },
+              ),
+            ],
           ),
           body: _stateBuilder(context, state),
         );
@@ -25,7 +46,7 @@ class TestListingScreen extends StatelessWidget {
   }
 
   Widget _stateBuilder(BuildContext context, TestListingState state) {
-    if (state is TestListingLoaded)
+    if (state is TestListingLoaded) {
       return Column(
         children: [
           for (var test in state.tests)
@@ -45,7 +66,8 @@ class TestListingScreen extends StatelessWidget {
             ),
         ],
       );
-    if (state is TestListingError)
+    }
+    if (state is TestListingError) {
       return SizedBox.expand(
         child: Center(
           child: Padding(
@@ -83,6 +105,7 @@ class TestListingScreen extends StatelessWidget {
           ),
         ),
       );
+    }
     if (state is TestListingLoading) {
       return Center(
         child: CircularProgressIndicator(),
