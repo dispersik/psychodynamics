@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:psychodynamics/back/data/utilities/bdi_ru_parser.dart';
+import 'package:psychodynamics/front/screens/mood/new_mood/new_mood_screen.dart';
 
 class MoodScreen extends StatefulWidget {
   @override
@@ -29,9 +30,13 @@ class _MoodScreenState extends State<MoodScreen> {
               height: MediaQuery.of(context).size.height * .05,
             ),
             GestureDetector(
-              onTap: () async {
-                final parser = BDIRUParser();
-                await parser.loadQuestions();
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => NewMoodScreen(),
+                  ),
+                );
               },
               child: Container(
                 width: MediaQuery.of(context).size.width * .9,

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:psychodynamics/back/data/utilities/bdi_ru_parser.dart';
+import 'package:psychodynamics/front/screens/tests/test_analyse/test_analyse_screen.dart';
 import 'package:psychodynamics/front/screens/tests/test_listing/test_listing_screen.dart';
 
 class TestScreen extends StatefulWidget {
@@ -66,7 +67,12 @@ class _TestScreen extends State<TestScreen> {
               ),
               GestureDetector(
                 onTap: () async {
-                  // Navigator.
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => TestAnalyseScreen(),
+                    ),
+                  );
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -77,13 +83,14 @@ class _TestScreen extends State<TestScreen> {
                         color: Colors.white54,
                         border: Border.all(color: Colors.black26)),
                     child: Center(
-                        child: Text(
-                      'Analyse Tests',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30,
+                      child: Text(
+                        'Analyse Tests',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30,
+                        ),
                       ),
-                    )),
+                    ),
                   ),
                 ),
               ),

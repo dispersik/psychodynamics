@@ -129,7 +129,7 @@ class _TestFormState extends State<TestForm> {
                 },
               ),
               Text(
-                '${widget.pageNumber ?? 1}/${widget.test.numberOfQuestions}',
+                '${widget.pageNumber}/${widget.test.numberOfQuestions}',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w300,
