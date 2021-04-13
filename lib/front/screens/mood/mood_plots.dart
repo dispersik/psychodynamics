@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:psychodynamics/back/injector.dart';
 import 'package:psychodynamics/front/screens/mood/bloc/mood_bloc.dart';
 import 'package:psychodynamics/front/screens/mood/bloc/mood_state.dart';
-import 'package:tflite/tflite.dart';
 
 class MoodPlotsScreen extends StatelessWidget {
   LineChartData data = LineChartData(
