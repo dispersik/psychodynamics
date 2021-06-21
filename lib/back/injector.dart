@@ -9,11 +9,11 @@ GetIt injector = GetIt.instance..initDependencies();
 extension Init on GetIt {
   void initDependencies() {
     registerSingleton<SQLiteProvider>(SQLiteProvider());
-    registerSingleton<LocalMoodRepository>(
-        LocalMoodRepository(dbProvider: get<SQLiteProvider>()));
+    registerSingleton<MoodRepositoryImpl>(
+        MoodRepositoryImpl(dbProvider: get<SQLiteProvider>()));
     registerSingleton<MoodBloc>(
       MoodBloc(
-        moodRepository: get<LocalMoodRepository>(),
+        moodRepository: get<MoodRepositoryImpl>(),
       )..add(
           MoodLoad(),
         ),

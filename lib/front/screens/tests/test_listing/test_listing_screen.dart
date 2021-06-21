@@ -18,26 +18,27 @@ class TestListingScreen extends StatelessWidget {
           builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: const Color(0xFF4739D2),
             title: Text(
-              'All tests',
+              'Все тесты',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w300,
               ),
             ),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.file_copy_sharp),
-                onPressed: () async {
-                  // print('db stuff');
-                  // final dbProvider = SQLiteProvider();
-                  // print(
-                  //   await (await dbProvider.getDBInstance('test_entries.db'))
-                  //       .query("table"),
-                  // );
-                },
-              ),
-            ],
+            // actions: [
+            //   IconButton(
+            //     icon: Icon(Icons.file_copy_sharp),
+            //     onPressed: () async {
+            //       // print('db stuff');
+            //       // final dbProvider = SQLiteProvider();
+            //       // print(
+            //       //   await (await dbProvider.getDBInstance('test_entries.db'))
+            //       //       .query("table"),
+            //       // );
+            //     },
+            //   ),
+            // ],
           ),
           body: _stateBuilder(context, state),
         );

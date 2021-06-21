@@ -5,11 +5,17 @@ class TestListingState {}
 class TestListingLoading extends TestListingState {}
 
 class TestListingLoaded extends TestListingState {
-  TestListingLoaded({required this.tests});
+  TestListingLoaded({
+    required this.tests,
+  });
+
   final List<Test> tests;
 }
 
 class TestListingError extends TestListingState {
-  TestListingError({required this.errorMessage});
+  TestListingError({
+    required this.errorMessage,
+  });
+
   final String errorMessage;
 }

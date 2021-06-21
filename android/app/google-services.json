@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "476543957856",
+    "project_id": "psychodynamics-3c1eb",
+    "storage_bucket": "psychodynamics-3c1eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476543957856:android:b0228eef45e40e63abbc05",
+        "android_client_info": {
+          "package_name": "com.dispersik.psychodynamics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476543957856-9hv1pmd889t241aaqgoe93eoedmj9jg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_U1g-9fVEbRYhxqilwGt72T9TtZD70dY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476543957856-9hv1pmd889t241aaqgoe93eoedmj9jg7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476543957856-bjmfet0u71t0hl2c86ke9ufgdtbkam04.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dispersik.psychodynamics"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -92,6 +92,7 @@ class _TestFormState extends State<TestForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color(0xFF4739D2),
         actions: [
           IconButton(
             icon: Icon(Icons.save),

@@ -20,7 +20,7 @@ class _MoodScreenState extends State<MoodScreen> {
       appBar: AppBar(
         actions: [
           IconButton(icon: Icon(Icons.data_usage), onPressed: () async {
-            final repo = LocalMoodRepository(dbProvider: SQLiteProvider());
+            final repo = MoodRepositoryImpl(dbProvider: SQLiteProvider());
             final moods = await repo.loadMood();
             print(moods);
           })

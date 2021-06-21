@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:psychodynamics/back/entities/test.dart';
 
 class TestTile extends StatelessWidget {
-  TestTile({required this.test, required this.onTap});
+  TestTile({
+    required this.test,
+    required this.onTap,
+  });
 
   final Test test;
   final void Function() onTap;
@@ -30,11 +33,13 @@ class TestTile extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 4,),
                 Container(
                   color: Colors.black26,
                   height: 2,
                   width: double.infinity,
                 ),
+                SizedBox(height: 10,),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -46,8 +51,8 @@ class TestTile extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      Text('Estimated time:'
-                          ' ${test.estimatedCompletionTimeInMinutes} min'),
+                      Text('Длительность:'
+                          ' ${test.estimatedCompletionTimeInMinutes} мин'),
                     ],
                   ),
                 ),
@@ -55,11 +60,14 @@ class TestTile extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.article, size: 20,),
+                      Icon(
+                        Icons.article,
+                        size: 20,
+                      ),
                       SizedBox(
                         width: 5,
                       ),
-                      Text('${test.numberOfQuestions} questions'),
+                      Text('${test.numberOfQuestions} вопросов'),
                     ],
                   ),
                 ),

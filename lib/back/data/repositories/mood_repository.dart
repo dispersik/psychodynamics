@@ -12,8 +12,8 @@ abstract class MoodRepository {
   Future<List<Mood>> loadMood();
 }
 
-class LocalMoodRepository extends MoodRepository {
-  LocalMoodRepository({required this.dbProvider});
+class MoodRepositoryImpl extends MoodRepository {
+  MoodRepositoryImpl({required this.dbProvider});
 
   final SQLiteProvider dbProvider;
 

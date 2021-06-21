@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:psychodynamics/back/entities/question.dart';
 
 class OptionTile extends StatefulWidget {
-  OptionTile(
-      {required this.option, required this.onTap, this.isEnabled = false});
+
+  OptionTile({
+    required this.option,
+    required this.onTap,
+    this.isEnabled = false,
+  });
 
   final Option option;
   final void Function(int) onTap;
@@ -18,7 +22,7 @@ class _OptionTileState extends State<OptionTile> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=> widget.onTap(widget.option.value),
+      onTap: () => widget.onTap(widget.option.value),
       child: Container(
         child: Row(
           children: [
