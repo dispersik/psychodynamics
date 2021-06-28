@@ -35,6 +35,10 @@ class TimeTrackingRecordsListing extends StatelessWidget {
             }
           },
         ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {},
+        ),
       ),
     );
   }

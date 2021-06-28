@@ -26,7 +26,7 @@ class TimeTrackingRecordTile extends StatelessWidget {
             'Activity Name',
             style: TextStyle(fontWeight: FontWeight.w500),
           ),
-          Text(record.activity.name),
+          Text(record.activityName),
           Text(
             'Duration In Hours',
             style: TextStyle(fontWeight: FontWeight.w500),

@@ -2,6 +2,9 @@ library domain;
 
 export 'di/di.dart';
 
+export 'model/emotion/emotion.dart';
+export 'model/influence/influence.dart';
+export 'model/influence/influencer.dart';
 export 'model/time_tracker/time_tracking_activity.dart';
 export 'model/time_tracker/time_tracking_end.dart';
 export 'model/time_tracker/time_tracking_record.dart';

@@ -11,10 +11,10 @@ extension TimeTrackingRecordMapper on TimeTrackingRecord {
 
   String toJsonWithId(int id) {
     final Map<String, dynamic> map = <String, dynamic>{
-      ACTIVITY_NAME_KEY: activity.name,
+      ACTIVITY_NAME_KEY: activityName,
       START_DATETIME_KEY: start.dateTime.toLocal().toString(),
       END_DATETIME_KEY: end.dateTime.toLocal().toString(),
-      GROUP_NAME_KEY: activity.groupName,
+      GROUP_NAME_KEY: start.activity.groupName,
       ID_KEY: id,
     };
     return jsonEncode(map);
